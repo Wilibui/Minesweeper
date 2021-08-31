@@ -1,5 +1,5 @@
 let grid = [[],[],[],[],[],[],[],[],[],[]];
-let nBoms = 20;
+let nBoms = 10;
 let nFlags = 0;
 let size = 10;
 let r;
