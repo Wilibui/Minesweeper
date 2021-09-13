@@ -6,7 +6,7 @@ function all() {
       if (grid[i][j].n == 0 && grid[i][j].open && !grid[i][j].flagged) {
         openNeigbours(i, j);
       }
-      if (grid[i][j].open) {
+      if (grid[i][j].open && grid[i][j].n != 10) {
         o++;
       }
       if (o == sq(size)-nBoms) {
