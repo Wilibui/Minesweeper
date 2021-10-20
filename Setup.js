@@ -1,4 +1,4 @@
-let nBoms = 10;
+let nBoms = 15;
 let nFlags = 0;
 let size = 10;
 
