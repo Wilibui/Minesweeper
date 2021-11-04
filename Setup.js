@@ -18,23 +18,40 @@ function setupMetric() {
   }
 }
 
-function setupGrid() {
-  for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++) {
+function setupGrid(i) {  
+  if(i == -1){
+    size = 10;
+    nBoms = 10;
+  } else if(i == 0){
+    size = 20;
+    nBoms = 40;
+  }else if(i == 1){
+    size = 30;
+    nBoms = 90;
+  }
+  grid = Array.from(Array(size), () => new Array(size));
+  
+  
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
       grid[i][j] = new Grid(i, j);
     }
   }
+  if(nBoms > sq(size)){nBoms = sq(size);}
   for (let i = 0; i < nBoms; i++) {
-    let x = round(random(0, 9));
-    let y = round(random(0, 9));   
+    let x = round(random(0, size-1));
+    let y = round(random(0, size-1));   
     while (grid[x][y].n == 10) {
-      x = round(random(0, 9));
-      y = round(random(0, 9));
+      x = round(random(0, size-1));
+      y = round(random(0, size-1));
     }
     grid[x][y].n = 10;
   }
-  for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++) { 
+  
+  
+  
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) { 
       grid[i][j].calcN();
     }
   }

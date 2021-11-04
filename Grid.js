@@ -1,23 +1,31 @@
-let grid = [[], [], [], [], [], [], [], [], [], []];
+let gridOne;
+let grid;
 
 class Grid {
   constructor(I, J) {
+    setupMetric();
+    r = r/(size/10);
+    s = s/(size/10);
+    t = t/(size/10);
     this.n = 0;    
     this.open = false;
     this.flagged = false;
     this.i = I;
     this.j = J;
     this.open = false;
-    this.x = s * (this.i-4.5);
-    this.y = s * (this.j-4.5);
+    this.x = s * (this.i-(size/2)+0.5);
+    this.y = s * (this.j-(size/2)+0.5);
   }
 
-  show() {
+  show() {    
+    setupMetric();
+    r = r/(size/10);
+    s = s/(size/10);
+    t = t/(size/10);
     fill(200);
     stroke(255);
     strokeWeight(s/10);
     square(this.x, this.y, s);
-
     if (this.open) {
       if (this.n == 10) {
         if (this.flagged || won) {
@@ -51,6 +59,10 @@ class Grid {
   }
 
   checkClick(f) {
+    setupMetric();
+    r = r/(size/10);
+    s = s/(size/10);
+    t = t/(size/10);
     let mX = mouseX - width/2;
     let mY = mouseY - height/2;
     if (this.x - s/2 < mX && mX < this.x + s/2) {
