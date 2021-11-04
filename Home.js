@@ -1,6 +1,8 @@
 function goHome(){
   playing = false;
   home = true;
+  lost = false;
+  won = false;
   nFlags = 0;
 }
 
