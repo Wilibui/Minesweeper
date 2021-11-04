@@ -25,6 +25,8 @@ class Grid {
     fill(200);
     stroke(255);
     strokeWeight(s/10);
+    this.x = s * (this.i-(size/2)+0.5);
+    this.y = s * (this.j-(size/2)+0.5);
     square(this.x, this.y, s);
     if (this.open) {
       if (this.n == 10) {
