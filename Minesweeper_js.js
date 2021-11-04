@@ -9,6 +9,7 @@ function setup() {
 }
 
 function draw() {
+  resizeCanvas(windowWidth, windowHeight);
   translate(width/2, height/2);
   background(0);
   if(playing){
