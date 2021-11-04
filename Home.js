@@ -1,6 +1,7 @@
 function goHome(){
   playing = false;
   home = true;
+  nFlags = 0;
 }
 
 function showHome(){
