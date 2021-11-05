@@ -18,17 +18,9 @@ function setupMetric() {
   }
 }
 
-function setupGrid(i) {  
-  if(i == -1){
-    size = 10;
-    nBoms = 10;
-  } else if(i == 0){
-    size = 20;
-    nBoms = 40;
-  }else if(i == 1){
-    size = 30;
-    nBoms = 90;
-  }
+function setupGrid(i) { 
+  size = 20 + (i*10);
+  nBoms = sq(size)/10;
   grid = Array.from(Array(size), () => new Array(size));
   
   
