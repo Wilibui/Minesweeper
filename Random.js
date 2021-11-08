@@ -47,7 +47,8 @@ function drawMainText() {
 function nextMap(){
   lost = false;
   won = false;
-  setupGrid();
+  i = (size - 15)/5;
+  setupGrid(i);
   nFlags = 0;
 }
 
