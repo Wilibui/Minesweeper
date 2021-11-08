@@ -19,8 +19,8 @@ function setupMetric() {
 }
 
 function setupGrid(i) { 
-  size = 20 + (i*10);
-  nBoms = sq(size)/10;
+  size = 15 + (i*5);
+  nBoms = floor(sq(size)/10);
   grid = Array.from(Array(size), () => new Array(size));
   
   
