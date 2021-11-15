@@ -18,18 +18,20 @@ function setupMetric() {
   }
 }
 
-function setupGrid(i) { 
+function setupGrid(i) {  
   size = 15 + (i*5);
   nBoms = floor(sq(size)/10);
   grid = Array.from(Array(size), () => new Array(size));
-  
-  
+
+
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
       grid[i][j] = new Grid(i, j);
     }
   }
-  if(nBoms > sq(size)){nBoms = sq(size);}
+  if (nBoms > sq(size)) {
+    nBoms = sq(size);
+  }
   for (let i = 0; i < nBoms; i++) {
     let x = round(random(0, size-1));
     let y = round(random(0, size-1));   
@@ -39,9 +41,9 @@ function setupGrid(i) {
     }
     grid[x][y].n = 10;
   }
-  
-  
-  
+
+
+
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) { 
       grid[i][j].calcN();
