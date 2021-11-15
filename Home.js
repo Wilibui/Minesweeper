@@ -1,8 +1,6 @@
 function goHome(){
   playing = false;
   home = true;
-  lost = false;
-  won = false;
   nFlags = 0;
 }
 
@@ -27,5 +25,7 @@ function showHome(){
   text("Minesweeper", 0, -5*s);
   textAlign(LEFT, BOTTOM);
   textSize(t);
-  text("Made by Wilibui", -5*s, 6*s);
+  text("Made by Wilibui", -3*s, 6*s);
+  logo.update(-4*s, 5.5*s, s/2);
+  logo.show();
 }
