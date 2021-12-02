@@ -1,5 +1,7 @@
 function goHome(){
   playing = false;
+  lost = false;
+  won = false;
   home = true;
   nFlags = 0;
 }
@@ -13,7 +15,8 @@ function showHome(){
   for(let i = -1; i <= 1; i++){
     red = map(i, -1, 1, 0, 255);
     green = map(i, -1, 1, 255, 0);
-    fill(red,green,0);
+    blue = 50;
+    fill(red, green, blue);
     rect(0*s,i*3*s,10*s,2*s);
   }
   noStroke();
